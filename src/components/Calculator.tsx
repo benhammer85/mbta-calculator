@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface CalculatorProps {
   title?: string;
@@ -9,7 +9,7 @@ interface ZoneOption {
   price: number;
 }
 
-const Calculator: React.FC<CalculatorProps> = ({ title = 'MBTA Transit Benefit Calculator' }) => {
+const Calculator = ({ title = 'MBTA Transit Benefit Calculator' }: CalculatorProps) => {
   // Basic inputs
   const [workDays, setWorkDays] = useState<number>(20);
   const [transitMode, setTransitMode] = useState<'subway-bus' | 'commuter-rail' | 'ferry'>('subway-bus');
